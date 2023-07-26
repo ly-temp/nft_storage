@@ -25,7 +25,7 @@ async function main(){
     hidden: true, // use the default of false if you want to ignore files that start with '.'
  })
 
-  console.log(`storing file(s) from ${directoryPath}`)
+  console.log(`storing ${directoryPath}`)
   const cid = await storage.storeDirectory(files)
 
   fs.appendFile('log.txt', directoryPath+'\t'+cid+'\n', function(err){
